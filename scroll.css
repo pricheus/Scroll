@@ -1,0 +1,197 @@
+*{
+    box-sizing: content-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font: 1.25rem 'Open Sans', sans-serif;
+}
+
+/*HEADER*/
+.mainContainer{
+    background: url('pexels-josh-sorenson-1714208.jpg');
+    height: 100vh;
+    background-size: cover;
+    color: #fff;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 2ch 3ch;
+}
+
+.logo{
+    width:9ch;
+    height: 9ch;
+}
+
+ul{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    font: 1.5rem;
+}
+
+li{
+    list-style: none;
+    margin: 0 2ch;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+}
+
+a:active{
+    color: rgb(41, 138, 194);
+}
+
+a:hover{
+    color: #102A42;
+}
+
+.fixed_header {
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+height: 10%;
+background-color: #fff;
+color: #222;
+
+}
+/*Scroll PRoject*/
+
+.scrollProject{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 60%;
+    font: 52px;
+    margin-bottom: 0;
+}
+
+.scroll_description{
+letter-spacing: 0.14ch;
+text-align: center;
+padding: 0 0.5ch;
+
+}
+
+button{
+    background: inherit;
+    color: #fff;
+    font-size: large;
+    width: 25ch;
+    height: 5ch;
+    border: 1px solid #fff;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #fff;
+    color: rgb(96, 181, 230);
+}
+
+/*About us*/
+
+.about{
+    background-color: hsl(210, 36%, 96%);
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+}
+
+.paintWord{
+    color: #40CFD4;
+}
+
+/*services*/
+.services{
+    background-color: #fff;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+}
+
+/*featured tour*/
+.tours{
+    background-color: hsl(210, 36%, 96%);
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+}
+
+/*footer*/
+
+footer{
+    background-color:#102A42 ;
+    color: #fff;
+    height: 20vh;
+    position: relative;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#navForPhone{
+    display: none;
+}
+
+
+@media screen and (max-width:480px) {
+    #navForComputer{
+      height: 9rem;
+    }
+
+    .show_nav {
+        height: 0;
+        overflow: hidden;
+        
+    }
+
+    ul{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        right: 38%;
+    }
+
+    li{
+        margin: 0.75ch 0;
+    }
+
+    header{
+        display: flex;
+        flex-direction: column;
+        background-color: #fff;
+        color: #617D98;
+    }
+
+    #navForPhone{
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+         position: absolute;
+        top: 5ch;
+        right: 2ch;
+    }
+
+   
+    .bars{
+        background-color: #102A42;
+        width: 40px;
+        height: 5px;
+        margin: 0.3ch;
+    }
+
+    footer{
+        text-align: center;
+    }
+}
