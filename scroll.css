@@ -33,7 +33,7 @@ header{
 }
 
 nav{
-    height: auto;
+    height: auto; /*!important*/
 }
 
 ul{
@@ -165,6 +165,22 @@ footer{
         background-color: #222;
         margin: 0.2ch 0;
 }
+
+/*get to the top*/
+
+
+.material-symbols-outlined{
+    overflow: hidden;
+     position: fixed;
+    bottom: 4ch;
+    right: 2ch;
+    background-color: #40CFD4;
+    width: 2ch;
+    height: 2ch;
+    border-radius: 9px;
+    z-index: 100;
+}
+
 
 @media screen and (max-width: 480px) {
     .toggleBtn{

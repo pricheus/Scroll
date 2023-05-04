@@ -12,8 +12,28 @@ window.onscroll = function(){
         header.classList.add('onScroll')
    } else{
     header.classList.remove('onScroll')
-   }                                                                                 
+   };
+
+   const homeHeight = Home.getBoundingClientRect().height;
+   if(window.pageYOffset > homeHeight ){
+    topBtn.classList.add('material-symbols-outlined')
+   } else {
+    topBtn.classList.remove('material-symbols-outlined')
+   }
+   
+   
 }
+
+//adjust links with sections
+const navLinks  = document.querySelectorAll('scroll_links');
+navLinks.forEach(function(links){
+    links.onclick = function(e){
+        e.preventDefault();
+
+        const id = e.currentTarget;
+        console.log(id)
+    }
+})
 
 //dynamic toggle
 const toggleBtn = document.querySelector('.toggleBtn');
@@ -33,3 +53,12 @@ toggleBtn.onclick = function(){
         
 
 }
+
+//get to the top BUTTON
+const topBtn = document.querySelector('#getTop');
+topBtn.onclick = function(){
+    window.scrollTo({
+        top:0
+    });
+};
+
