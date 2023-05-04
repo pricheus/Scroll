@@ -1,34 +1,35 @@
-//interactive elements
-const toggleNav = document.querySelector('#navForPhone');
-const linksConatiner = document.querySelector('.navForComputer');
-const links = document.querySelector('.links')
+// dynamic date
+const date =  document.getElementsByClassName('dynamicDate')[0];
+date.innerHTML = new Date().getFullYear()
 
-//event lsiteners
-
-//dynamic date
-const date = document.querySelector('.date');
-date.innerHTML= new Date().getFullYear()
-
-//dynamic toggle
-const navHeight = toggleNav.getBoundingClientRect();
-toggleNav.onclick = function(){
-    //nav.classList.toggle('show_nav')
-
+//dynamic scroll
+const header =  document.querySelector('header');
+const Home = document.getElementById('home');
+window.onscroll = function(){
    
-    const linksHeight = links.getBoundingClientRect().height;
-    if(navHeight === 0){
-        navbar.style.height = `${linksHeight}px`
-    }
+   const headerHeight = header.getBoundingClientRect().height;
+   if (window.pageYOffset > headerHeight){
+        header.classList.add('onScroll')
+   } else{
+    header.classList.remove('onScroll')
+   }                                                                                 
 }
 
-const navbar = document.querySelector('header');
-//fixed navBar
-window.onscroll = function(){
-    const scrollHeight = window.pageYOffset ;
-    const navHeight = navbar.getBoundingClientRect().height
-    if(scrollHeight > navHeight){
-      navbar.classList.add('fixed_header') 
+//dynamic toggle
+const toggleBtn = document.querySelector('.toggleBtn');
+const linksContainer = document.querySelector('nav');
+const links =  document.querySelector('.links')
+
+toggleBtn.onclick = function(){
+    const navHeight = linksContainer.getBoundingClientRect().height;
+    const linksHeight = links.getBoundingClientRect().height;
+
+    if(navHeight === 0){
+        linksContainer.style.height = `${linksHeight}px`;
+        linksContainer.style.transitionDuration = '0.5s';
     } else {
-        navbar.classList.remove('fixed_header') 
+        linksContainer.style.height = 0;
     }
+        
+
 }
